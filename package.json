@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite --mode development",
     "pro": "vite --mode production",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build:dev": "vite build --mode development",
+    "build:pro": "vite build --mode production",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
@@ -39,6 +40,7 @@
     "prettier": "^3.0.3",
     "sass": "^1.66.1",
     "typescript": "~5.2.0",
+    "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.11",
     "vite-plugin-compression": "^0.5.1",

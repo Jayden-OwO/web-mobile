@@ -1,5 +1,5 @@
 /* 外边距、内边距全局样式 */
-@for $i from 0 through 300 {
+@for $i from 0 through 100 {
   .mt#{$i} {
     margin-top: #{$i}px !important;
   }
@@ -27,21 +27,21 @@
 }
 
 /* 宽度全局样式 */
-@for $i from 0 through 1000 {
+@for $i from 0 through 500 {
   .w#{$i} {
     width: #{$i}px !important;
   }
 }
 
 /* 高度全局样式 */
-@for $i from 0 through 1000 {
+@for $i from 0 through 500 {
   .h#{$i} {
     height: #{$i}px !important;
   }
 }
 
 /* 字体全局样式 */
-@for $i from 0 through 100 {
+@for $i from 0 through 50 {
   .fs#{$i} {
     font-size: #{$i}px !important;
   }

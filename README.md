@@ -1,6 +1,4 @@
-<h1 align="center">Vue3 h5 template</h1>
-
-**🌱 基于 Vue3 全家桶、TypeScript、Vite H5模版**
+<h1 align="center">🌱Easy-Lms学习平台移动端</h1>
 
 - [x] ⚡ Vue3 + Vite4
 - [x] 🍕 TypeScript

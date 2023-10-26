@@ -1,11 +1,12 @@
-import { fileURLToPath, URL } from 'node:url';
-import { ConfigEnv, defineConfig, loadEnv, UserConfig } from 'vite';
+import {fileURLToPath, URL} from 'node:url';
+import {ConfigEnv, defineConfig, loadEnv, UserConfig} from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import { VantResolver } from '@vant/auto-import-resolver';
+import {VantResolver} from '@vant/auto-import-resolver';
 import viteCompression from 'vite-plugin-compression';
-import { createHtmlPlugin } from 'vite-plugin-html';
+import {createHtmlPlugin} from 'vite-plugin-html';
 
 // https://vitejs.dev/config/
 const viteConfig = defineConfig(({ mode }: ConfigEnv): UserConfig => {
@@ -19,6 +20,16 @@ const viteConfig = defineConfig(({ mode }: ConfigEnv): UserConfig => {
         plugins: [
             vue(),
             vueJsx(),
+            AutoImport({
+                resolvers: [VantResolver()],
+                imports: ['vue', 'vue-router'],
+                eslintrc: {
+                    enabled: false, // Default `false`
+                    filepath: './.eslintrc-auto-import.json',
+                    globalsPropValue: true,
+                },
+                dts: 'src/auto-import.d.ts',
+            }),
             Components({
                 resolvers: [VantResolver()],
             }),
