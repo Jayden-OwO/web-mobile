@@ -1,0 +1,145 @@
+/* 外边距、内边距全局样式 */
+@for $i from 0 through 300 {
+  .mt#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .mr#{$i} {
+    margin-right: #{$i}px !important;
+  }
+  .mb#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  .ml#{$i} {
+    margin-left: #{$i}px !important;
+  }
+  .pt#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .pr#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  .pb#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .pl#{$i} {
+    padding-left: #{$i}px !important;
+  }
+}
+
+/* 宽度全局样式 */
+@for $i from 0 through 1000 {
+  .w#{$i} {
+    width: #{$i}px !important;
+  }
+}
+
+/* 高度全局样式 */
+@for $i from 0 through 1000 {
+  .h#{$i} {
+    height: #{$i}px !important;
+  }
+}
+
+/* 字体全局样式 */
+@for $i from 0 through 100 {
+  .fs#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+
+.wp100 {
+  width: 100% !important;
+}
+
+.hp100 {
+  height: 100% !important;
+}
+
+
+/* 文字单行省略号 */
+.otw {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 全局布局通用宽度
+.common-width {
+  width: 1200px;
+  //width: 62.5%;
+}
+
+
+// 超出隐藏
+.o-h {
+  overflow: hidden;
+}
+
+// 相对定位
+.relative {
+  position: relative;
+}
+
+// 绝对定位
+.absolute {
+  position: absolute;
+}
+
+// 居中
+.tc {
+  text-align: center;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+// flex 布局常用样式
+.flex {
+  display: flex !important;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: end;
+}
+
+.jc-start {
+  justify-content: start;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+.primary-color {
+  color: var(--primary-color)
+}
